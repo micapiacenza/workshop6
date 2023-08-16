@@ -1,0 +1,27 @@
+<div class="mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Chat App</h2>
+          <form (ngSubmit)="sendMessage()">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="message"
+                name="message"
+                placeholder="Type your message...">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-group">
+            <li *ngFor="let msg of messages" class="list-group-item">{{ msg }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
